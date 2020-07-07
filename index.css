@@ -1,0 +1,331 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+/*custom properties*/
+:root{
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Sources Code Pro', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 900; 
+
+   
+    /* --clr-dark: #303030; */
+    --clr-light: #EEE9E9;
+    --clr-accent: #396ccc;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    --font-color:rgb(241, 221, 221);
+}
+
+@media (min-width: 850px){
+    :root{
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+/* general styles*/
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    background: #F0ECEC;
+    color: var(--clr-dark);
+    font-size: var(--ff-primary);
+    line-height: 1.6;
+    font-family: var(--ff-primary);
+    
+    /* font-family: 'Open Sans', sans-serif; */
+}
+/*navigation*/
+.logo{
+  max-width: 150px;
+  user-select: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+.nav{
+  position: fixed;
+  z-index: 100;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: .9;
+  transform: translateX(100%);
+  transition: 250ms ease-in-out;
+}
+.nav__list{
+  list-style: none;
+  color: var(--clr-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.nav__list a{
+  color:var(--clr-light);
+  text-decoration: none;
+  font-size: var(--fs-h3);
+}
+.nav__list a:hover{
+  color: var(--clr-accent);
+  
+}
+/*focus for all a-links*/
+a:focus{
+  color: solid var(--clr-accent);
+/*margin:1px solid var(--clr-accent);*/
+ padding: .1em;
+}
+
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  padding: .8em;  
+  /* background-color:#3681E4; */
+  background-color: var(--clr-light);
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 1000;
+  box-shadow: inset 0 0 8px #829ed3;
+  margin: 0;
+  opacity: .9;
+}
+.hamburger{
+  font-size: 1.2em;
+}
+.hide-menu{
+  display: none;
+}
+
+/*Hi, I am Herbert section*/
+.intro{
+position: relative;
+top:3 em;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+/*Typography*/
+  h1,
+  h2,
+  h3{
+      line-height: 1;
+      margin:0;
+  }
+  h1{ font-size: var(--fs-h1);}
+  h2{ font-size: var(--fs-h2);}
+  h3{ font-size: var(--fs-h3);}
+  /*styling titles*/
+.section_title{
+    margin-bottom: .25em;
+}
+
+strong{
+    font-weight: var(--fw-bold);
+}
+.section_title{
+    font-weight: var(--fw-reg);
+    
+}
+.sectionTitle--intro strong{
+    display: block;
+}
+
+  .section__subtitle,
+  .section__subtitle--intro{
+    margin:0;
+    font-size: var(--fs-h3);
+    font-family: var(--ff-secondary);
+    background: var(--clr-accent);
+    padding: .2em;
+    margin-bottom: .3em;
+    border-radius: 4px;
+  }
+  section{
+      padding: 2em;
+  }
+  .section__title{
+    text-align: center;
+  }
+  @media(min-width:520px){
+    /*Intro Section*/
+      .intro{ 
+        display: grid;
+        grid-template-columns: min-content max-content;
+        grid-template-areas:"img title" "img subtitle";
+        margin: 0 auto;
+        grid-column-gap: .8em;
+      }
+      .section_title{
+        grid-area: title;
+      }
+      .section__subtitle--intro{
+        grid-area: subtitle;
+        align-self: start; /*prevents stretching*/
+        text-align: right;
+        grid-row: 2/3;
+        grid-column: -1/1;
+        position: relative;
+        right: 1.5em;
+        width: calc(100% + 2.5em);
+      }
+
+      .intro-img{
+        max-width: 250px;  
+        grid-area: img;
+        z-index: 1; 
+      }
+  }   
+  /*  My services section (what I do)*/
+  .my__services{
+    background-color: var(--clr-dark);
+    background-image: url(./Images/services-bg.jpg);
+    background-size: cover;
+    /*background-blend-mode: multiply;*/
+    color: var(--clr-light);
+  font-weight:lighter;
+    text-align:center;
+  }
+  .section__title{
+    color: var(--clr-accent);
+    margin-bottom: 10px;
+  }
+
+  .line{
+   width: 80px;
+   height:70px;
+   border-bottom: 1px solid rgb(238, 225, 225);
+   position: relative;
+   left: 2px;
+   top: -4em;
+   display: inline-block;
+   padding-bottom: calc(100% -4px);
+   opacity: .7;
+  }
+
+  /*button*/
+  .my__services a{
+    height:150px;
+    width: 100px;
+    border-radius: 2.5px;
+    background-color: var(--clr-accent);
+    text-decoration: none;
+    color: var(--clr-light);
+    padding: .22em;
+    color: var(--clr-dark);
+  }
+.my__services a:hover{
+  background-color: #0859f0;
+  padding: .4em;
+}
+.service{
+  max-width: 500px;
+  margin-left: .5em;
+}
+@media(min-width:600px){
+  .services{
+    display: flex;
+  }
+  .service{
+    margin-left: .5em;
+    max-width: 500px;
+  }
+}
+.about-me-intro{
+  max-width: 1000px;
+}
+ /*WHO I AM SECTION*/
+ @media(min-width:600px){
+   .about-me-intro{
+    display: grid;
+    grid-column: 1fr 250px;
+    grid-column-gap: .2em;
+    grid-template-areas: "subtitle img2"
+                          "paragraph img2";
+   }
+   .section__subtitle--intro2{
+     grid-area: subtitle;
+     align-self: start;
+     text-align: left;
+     min-width: calc(100% + 18em);
+   }
+   .img2{
+     grid-area: img2;
+     position: relative;
+     bottom: .7em;
+   }
+   .intro-paragraph{
+     grid-area: paragraph;
+   }
+   .intro-paragraph2{
+     grid-area: paragraph2;
+  
+   }
+ }
+ h5{
+   padding: 0;
+   margin: 0;
+   font-weight: 500;
+ }
+ /*my work/ projects*/
+ .my-work{
+  background-color: var(--clr-dark);
+ }
+ .portfolio{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: .5em;
+ }
+ .portfolio__item{
+   width: 100%;
+ }
+ /*footer*/
+
+ .footer{
+   background-color: #C0D9D9;
+   color: var(--clr-accent);
+   font-weight: bolder;
+   text-align:center;
+   font-size: var(--fs-h3);
+   height: 90px;
+ }
+
+ .footer ul li {
+   list-style: none;
+   display: inline-block;
+   padding: 1em;
+   padding-top: 1rem;
+ }
+ .footer a{
+   
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  font-size: 1.3em;
+ }
+ /*Project section*/
+ .project-description{
+   max-width: 400px;
+ }
+ main{
+   margin-left: 2.5rem;
+ }
