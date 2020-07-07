@@ -307,7 +307,7 @@ strong{
    font-weight: bolder;
    text-align:center;
    font-size: var(--fs-h3);
-   height: 90px;
+   height: 95px;
  }
 
  .footer ul li {
@@ -320,7 +320,7 @@ strong{
    
   color: var(--clr-accent);
   font-weight: var(--fw-bold);
-  font-size: 1.3em;
+  font-size: 1em;
  }
  /*Project section*/
  .project-description{
