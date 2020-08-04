@@ -319,7 +319,7 @@ strong{
  /*footer*/
 
  .footer{
-   background-color: #C0D9D9;
+   background-color: #e6f3f3;
    color: var(--clr-accent);
    font-weight: bolder;
    text-align:center;
@@ -328,7 +328,7 @@ strong{
    width: 100%;
    position: fixed;
    bottom:0;
-   border-top: 2px solid rgb(39, 35, 35);
+   border-top: 2px solid rgb(226, 224, 224);
    margin-bottom: -1;
    z-index: 20;
  }
