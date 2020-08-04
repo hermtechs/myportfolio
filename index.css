@@ -52,6 +52,9 @@ body{
   user-select: none;
   font-family: 'Cabin Sketch', cursive;
 }
+.logo-txt{
+  transition: 250ms ease-in-out;
+}
 
 header{
   display: flex;
@@ -331,6 +334,7 @@ strong{
    border-top: 2px solid rgb(226, 224, 224);
    margin-bottom: -1;
    z-index: 20;
+   /* transition: 250ms ease-in-out; */
  }
 
  .footer ul li {
