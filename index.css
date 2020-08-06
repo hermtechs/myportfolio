@@ -241,6 +241,7 @@ strong{
     color: #a2c1f0;
     font-weight: bold;
     transition: 250ms;
+    user-select: none;
   }
 .my__services a:hover{
   background-color: #3f4144;
