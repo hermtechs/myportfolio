@@ -1,8 +1,8 @@
 //opening and closing navigation menu after clicking on the hamburger menu
 const navBtn = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav');
-navBtn.addEventListener('click',()=>{ 
-    
+navMenu.style.transform = 'translateX(100%)';
+navBtn.addEventListener('click',()=>{    
     if(navMenu.style.transform === 'translateX(100%)'){
       navMenu.style.transform = 'translateX(0%)'; 
     }
@@ -18,6 +18,7 @@ navLinks.forEach(link =>{
         navMenu.style.transform = 'translateX(100%)';
     })
 })
+
 //changing logo styles onscroll
 window.onscroll = function(){ scrollFunc(); }
 function scrollFunc(){
@@ -30,5 +31,4 @@ function scrollFunc(){
         logo.innerText = '<devherbert/>';
         logo.style.fontSize = '1.4rem';
     }
-    
 }
