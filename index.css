@@ -37,7 +37,7 @@ html{
 }
 
 body{
-    background: #F0ECEC;
+    background: #f3ebeb;
     color: var(--clr-dark);
     font-size: var(--ff-primary);
     line-height: 1.6;
@@ -205,7 +205,7 @@ strong{
   /*  My services section (what I do)*/
   .my__services{
     background-image: url(./Images/service-bg5.jpg);
-    background-color: rgb(71, 66, 66);
+    background-color: rgb(36, 32, 32);
     background-blend-mode: multiply;
     background-size: cover;
     text-align:center;
@@ -269,7 +269,10 @@ strong{
   position: sticky;
   z-index: -2;
   bottom: -.1px;
-  max-width: 1000px;
+  max-width: 600px;
+ }
+ .about-me-intro{
+   max-width: 700px;
  }
  .intro-paragraph{
   background-color: #eff1ec; 
