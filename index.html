@@ -12,25 +12,32 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 
         <div class="nav-bar">
         <div class="logo">
-            <h3 class="logo-txt">&lt; devherbert&gt;</h3>
+            <a href="index.html"> <h3 class="logo-txt">&lt;devherbert&gt;</h3></a>
         </div>
            <span class="hamburger"><i class="fas fa-bars nav-toggle"></i></span>
+        
+           <div class="nav-big-screen">
+            <a class="nav__link" href="#services"><h3> Services</h3> </a>  
+             <a class="nav__link" href="#work"> <h3>  Projects</h3> </a> 
+             <a class="nav__link" href="#work"> <h3> Certificates & Recognition</h3> </a>
+             <a class="nav__link" href="#about"> <h3> About Me </h3> </a>   
+         </div>
     </div>
     <header>
         <nav class="nav">
          <ul class="nav__list">
-          <li class="nav__item"> <a class="nav__link" href="#home"> Home</a> </li>
-          <li class="nav__item"> <a class="nav__link" href="#services"> My Services</a> </li>
+          <li class="nav__item"> <a class="nav__link" href="#services"> Services</a> </li>
+          <li class="nav__item"> <a class="nav__link" href="#work"> Projects </a>  </li>
           <li class="nav__item"> <a class="nav__link" href="#about"> About Me </a> </li>
-          <li class="nav__item"> <a class="nav__link" href="#work"> My Projects </a>  </li>
+          <li class="nav__item"> <a class="nav__link" href="#home">Certifications & Recognition</a> </li>
         </ul>
         </nav>
-    
     </header>
     <main> <!--contains all elements except about-Me and Footer-->
     <!--Introduction section-->
@@ -38,51 +45,50 @@
       <h1 class="section_title sectionTitle--intro">
           Hi, I am <strong>Herbert </strong> 
       </h1>
-      <p class="section__subtitle section__subtitle--intro">front-end developer</p>
+      <h5 class="sub-intro">I create value with code</h5>
+      <p class="section__subtitle section__subtitle--intro intro-precise" >  <span></span> </p>
       <img class="intro-img" src="images/herbert-at-devfest.jpg" alt="herbert-at-devfestDoha" title="DevFest GDG Doha">
     </section>
     
     <!--My Services-->
     <section class="my__services" id="services">
         <h2 class="section__title section__title--services">what I  do</h2>
-        <span class="line"></span>
+        
+        <!-- <span class="line"></span> -->
         <div class="services">
-            <div class="service">
+            <div data-aos="fade-right" class="service">
                 <h3>Design + Development</h3>
                 <p>Using modern web technologies like html5, css3, Javascript, I build and design  various kinds of websites for different
                     types of businesses and organisations from E-commerce, marketing,
                     news publication to personal portfolios just like mine here:)</p>
                     <p>
-                    I build these websites to have a fancy, responsive and modern design.
-                    Speaking of modern design, Search Engine Optimisation (SOP) is something
+                    I build these websites to have a fancy, responsive and modern design.</p>
+                   <p> Speaking of modern design, Search Engine Optimisation (SOP) is something
                     I consider a lot while structuring these websites. That's for marketing, and for your clients
                     to easily access your websites from Search Engines like Google.
                     .</p>
             </div> <!--/service-->
 
-            <div class="service">
+            <div data-aos="fade-left" class="service">
                 <h3>Maintenance</h3>
-                <p>Once I (someone else) have built you a website, you really will need
-                   to maintain, update it with new technoligies to keep it on a
-                   a modern standard. 
-                   <p>I  update my skills regulary
-                       so, I am always at your service. You can reach out to me anytime:)
+                <p>Once I (someone else) have built you a website, you will need or should consider
+                   to maintain, update your site with new technoligies just to keep it in line with
+                   time
+                   <p>I do update my skills on a reguular basis.
+                       So, I am always at your service. You can reach out to me anytime:)
                     </p> 
                        
             </div> <!--/service-->
             
-            <div class="service">
+            <div data-aos="fade-right" class="service">
                 <h3>Web hosting and domain names</h3>
-                <p>I assist in purchasing domain names, web hosting space from companies such as 
+                <p>I  purchase domain names, web hosting space from companies such as 
                     <strong>namecheap</strong>. This also includes setting up an FTP Client, 
                     Cpanel, SSL Certificates and other 
-                    related work
-        </p>
-            </div> <!--/service-->
-
+                    related work </p>
+         </div> <!--/service-->
         </div><!--/services-->
-
-        <a href="#work" class="btn">My Projects</a>
+        <div class="projects-link"><a href="#work" class="btn">Projects</a> </div> 
     </section>
   
     <!--My work-->
@@ -92,35 +98,35 @@
 
     <div class="portfolio">
         <!--portfolio item 01-->
-        <a href="portfolio-item.html" class="portfolio__item">
+        <a href="portfolio-item.html" data-aos="flip-right" class="portfolio__item">
         <img src="images/portfolio-01.jpg" alt="" class="portfolio__img">
         </a>
          <!--portfolio item 02-->
-        <a href="portfolio-item.html" class="portfolio__item">
+        <a href="portfolio-item.html" data-aos="flip-right" class="portfolio__item">
          <img src="images/portfolio-02.jpg" alt="" class="portfolio__img">
          </a>
          <!--portfolio item 03-->
-       <a href="portfolio-item.html" class="portfolio__item">
+       <a href="portfolio-item.html" data-aos="flip-right" class="portfolio__item">
        <img src="images/portfolio-03.jpg" alt="" class="portfolio__img">
       </a>
        <!--portfolio item 04-->
-       <a href="#" class="portfolio__item">
+       <a href="#" data-aos="flip-right" class="portfolio__item">
         <img src="images/portfolio-04.jpg" alt="" class="portfolio__img">
         </a>
          <!--portfolio item 05-->
-         <a href="#" class="portfolio__item">
+         <a href="#" data-aos="flip-right" class="portfolio__item">
             <img src="images/portfolio-05.jpg" alt="" class="portfolio__img">
             </a>
          <!--portfolio item 06-->
-         <a href="#" class="portfolio__item">
+         <a href="#" data-aos="flip-right" class="portfolio__item">
             <img src="images/portfolio-06.jpg" alt="" class="portfolio__img">
             </a>
              <!--portfolio item 07-->
-        <a href="#" class="portfolio__item">
+        <a href="#" data-aos="flip-right" class="portfolio__item">
             <img src="images/portfolio-07.jpg" alt="" class="portfolio__img">
             </a>
              <!--portfolio item 08-->
-        <a href="#" class="portfolio__item">
+        <a href="#" data-aos="flip-right" class="portfolio__item">
             <img src="images/portfolio-08.jpg" alt="" class="portfolio__img">
             </a>
         </div> 
@@ -129,58 +135,73 @@
 </main>    
       <!--About me-->
       <section class="about-me" id="about">
-        <h2 class="section__title section__title--about">About me</h2>
+        <h2 data-aos="fade-in" class="section__title section__title--about">About me</h2>
         <p class="section__title section__title--about"></p>
         <div class="about-me__body">
               
         </div>
         <div class="about-me-intro">
-        <p class="section__subtitle section__subtitle--intro section__subtitle--intro2">
+        <p data-aos="fade-in" class="section__subtitle section__subtitle--intro section__subtitle--intro2">
             A front-end developer based in Doha,Qatar
         </p>
 
         <div class="intro-paragraph">
-            <p> 
+            <p data-aos="fade-in"> 
               I am Herbert Muhiirwa a freelance web developer,
-            Ugandan by nationality currently living in Qatar
-        <br>
+            Ugandan by nationality currently living in Qatar </p>
+        <p data-aos="fade-in">
         I am currently looking for a more challenging and interesting opportunity 
         to work fulltime as front-end web developer.
         You can reach out to me at <a href="mailto:hermtechs@gmail.com">hermtechs@gmail.com</a>
          </p>
 
-             <p>
-                <h5>Here's a brief story about me;</h5> 
+        <h5 data-aos="fade-in">Here's a brief story about me;</h5> 
+        <p data-aos="fade-in"> 
                 I have always been fascinated by how the web and other technologies work ever since I got introduced to
              my first computer. I was always curious about how websites  like
-             google worked wondering, 'how does it know so much!!' <br>
+             google worked wondering, 'how does it know so much!!'
+             </p>
+             <p data-aos="fade-in">
              As my curiosity kept on growing, I started doing research, reading tech articles
              watching tech youtube videos. Then my google question finally got answered.
-             <br>
+            </p>
+             <p data-aos="fade-in">
              I realised google is literally a curious machine that keeps on searching other websites
-             for their data :) <br>
+             for their data :). That was pretty awesome for me realise search engines literally didn't own their content.
+             </p>
+             <p data-aos="fade-in">
              But the higher you go, the further the sky seems to be. So, more questions kept on
              popping up in my head and my curiousity developed into a passion for tech <br>
              So, I decided not to settle for basic knowledge, started taking online courses, later on
              building projects 
               and that's how I got into web developement
+              <br>
+              <br>
             </p>
             </div>
        
       </div>
-      <div class="my-image"> <img src="images/herbert2.jpg" alt="herbert-upright" class="img2"></div>
+      <div data-aos="fade-bottom" class="my-image"> <img src="images/herbert2.jpg" alt="herbert-upright" class="img2"></div>
     </section>
     <!--Footer-->
     <footer class="footer" id="contacts">
         <!-- <a href="mailto:hermtechs@gmail.com" class="footer__link">hermtechs@gmail.com</a> -->
       <ul class="social-list">
         <li class="social-list__item"> <a href="mailto:hermtechs@gmail.com" class="social-list_link"><i class="far fa-envelope"></i></a></li>    
-        <li class="social-list__item"> <a href="http://instagram.com/muhiirwaH" class="social-list_link"><i class="fab fa-instagram"></i></a></li>
-        <li class="social-list__item"> <a href="http://twitter.com/muhiirwaH" class="social-list_link"><i class="fab fa-twitter"></i> </a></li>
+        <li class="social-list__item"> <a href="http://instagram.com/hermtechs" class="social-list_link"><i class="fab fa-instagram"></i></a></li>
+        <li class="social-list__item"> <a href="http://twitter.com/herMtechs" class="social-list_link"><i class="fab fa-twitter"></i> </a></li>
         <li class="social-list__item"> <a href="http://linkedin.com/in/herbert-muhiirwa-4a8942193" class="social-list_link"><i class="fab fa-linkedin-in"></i></a></li>
         <li class="social-list__item"> <a href="http://github.com/hermtechs" class="social-list_link"><i class="fab fa-github"></i></a></li>
       </ul>
     </footer>
     <script src="index.js" async defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: false,
+        delay:400,
+        duration:800,
+      });
+    </script>
 </body>
 </html>
