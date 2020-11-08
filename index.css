@@ -7,15 +7,11 @@
 :root{
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Sources Code Pro', monospace;
-
     --fw-reg: 300;
     --fw-bold: 900; 
-
-   
     /* --clr-dark: #303030; */
     --clr-light: #EEE9E9;
     --clr-accent: #396ccc;
- 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
@@ -37,12 +33,11 @@ html{
 }
 
 body{
-    background: #f3ebeb;
+    background: #eee6e6;
     color: var(--clr-dark);
     font-size: var(--ff-primary);
     line-height: 1.6;
     font-family: var(--ff-primary);
-    
     /* font-family: 'Open Sans', sans-serif; */
 }
 
@@ -51,6 +46,11 @@ body{
   max-width: 150px;
   user-select: none;
   font-family: 'Cabin Sketch', cursive;
+
+}
+.logo a{
+  text-decoration: none;
+  color:#202f50;
 }
 .logo-txt{
   transition: 250ms ease-in-out;
@@ -104,6 +104,8 @@ a:focus{
   display: flex;
   justify-content: space-between;
   padding: .8em;  
+  /* align-items: center; */
+  text-align: center;
   /* background-color:#3681E4; */
   background-color: var(--clr-light);
   position: fixed;
@@ -119,6 +121,28 @@ a:focus{
 }
 .hide-menu{
   display: none;
+}
+/* MEDIA QUERIES/ NAVIGATION ON BIG SCREENS */
+@media(max-width:600px){
+  .nav-big-screen{
+    display: none;
+  }
+}
+@media(min-width:600px){
+  .hamburger{
+    display: none;
+  }
+  .nav-big-screen{
+    display: flex;
+  }
+  .nav-big-screen a{
+    text-decoration: none;
+    padding: 0 .8em 0 .8em;;
+  }
+  .nav-big-screen a h3{
+    font-size:1rem;
+    color: #1c3f80;
+  }
 }
 
 /*Hi, I am Herbert section*/
@@ -144,9 +168,32 @@ img{
 .section_title{
     margin-bottom: .25em; 
 }
-
+.sub-intro{
+font-size:1rem;
+color:#555
+}
 strong{
     font-weight: var(--fw-bold);
+}
+/* CHANGE SUUUB INTRO TEXT */
+.intro-precise span:before{
+  content: '';
+  color:rgb(223, 202, 109);
+  font-weight: bolder;
+  animation: animate infinite 5s;
+  animation-timing-function:ease-in-out
+}
+@keyframes animate{
+
+  0%{
+    content: 'front-end developer';
+  }
+  50%{
+  content: 'web designer';
+  }
+  100%{
+    content:'freelancer';
+  }
 }
 
 .section_title{
@@ -204,20 +251,19 @@ strong{
   }   
   /*  My services section (what I do)*/
   .my__services{
-    background-image: url(./Images/service-bg5.jpg);
-    background-color: rgb(36, 32, 32);
-    background-blend-mode: multiply;
+    background: url(./Images/dark-bg-img.webp);
+    background-color: rgb(19, 10, 43);
+    background-blend-mode:saturation;
     background-size: cover;
-    text-align:center;
-    font-weight: lighter;
-    color: rgb(187, 186, 186);
+    font-weight: bold;
+    color: rgb(165, 155, 155)
   }
   .section__title{
     color: var(--clr-accent);
     margin-bottom: 10px;
   }
 
-  .line{
+  /* .line{
    width: 80px;
    height:70px;
    border-bottom: 1px solid rgb(238, 225, 225);
@@ -227,6 +273,10 @@ strong{
    display: inline-block;
    padding-bottom: calc(100% -4px);
    opacity: .7;
+  } */
+  .section__title--services{
+    padding: .8em 0 .5em 0;
+    border-bottom: 2px solid #555;
   }
 
   /*button*/
@@ -243,12 +293,16 @@ strong{
     transition: 250ms;
     user-select: none;
   }
+  .projects-link{
+    text-align: center;
+  }
 .my__services a:hover{
   background-color: #3f4144;
   padding: .4em;
 }
 .service h3{
   color:var(--clr-accent);
+  text-align:center;
 }
 .service{
   max-width: 500px;
@@ -319,9 +373,14 @@ strong{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: .5em;
+  /* background-color: #98a5c2; */
  }
  .portfolio__item{
    width: 100%;
+ }
+ .portfolio a img{
+   border-radius: .5em;
+   padding: .2em;
  }
  /*footer*/
 
